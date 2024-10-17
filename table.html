@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Advanced Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div id="notificationContainer"></div>
+    <div class="dashboard">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <img src="logo.png" alt="">
+            </div>
+            <ul class="nav-links">
+                <li class="active" data-page="business-opportunities">
+                    <a href="#business-opportunities">
+                        <i class="fas fa-briefcase"></i> Business Opportunities
+                    </a>
+                </li>
+                <li>
+                    <a href="#search">
+                        <i class="fas fa-search"></i> Search
+                    </a>
+                </li>
+                <li>
+                    <a href="#match">
+                        <i class="fas fa-random"></i> Match
+                    </a>
+                </li>
+                <li>
+                    <a href="#connect">
+                        <i class="fas fa-link"></i> Connect
+                    </a>
+                </li>
+                <li>
+                    <a href="#transact">
+                        <i class="fas fa-exchange-alt"></i> Transact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header>
+                <div class="header-content">
+                    <h2>New SESAMI Financing Line Receive Funds For Unpaid Invoices</h2>
+                </div>
+            </header>
+            <div id="dashboard" class="page-content active">
+                <div class="table-card glow">
+                    <h3>Tender / RFx Publications</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Buyer Company</th>
+                                <th>Type</th>
+                                <th>RFQ Ref. No.</th>
+                                <th>Description</th>
+                                <th>Starting Date</th>
+                                <th>Closing Date</th>
+                                <th>Submission</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rfqTableBody">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pagination">
+                    <button id="prevPage" class="pagination-btn">Previous</button>
+                    <span id="pageInfo"></span>
+                    <button id="nextPage" class="pagination-btn">Next</button>
+                </div>
+            </div>
+    
+            <div id="popupModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div id="popupDetails"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="table.js"></script>
+</body>
+</html>
